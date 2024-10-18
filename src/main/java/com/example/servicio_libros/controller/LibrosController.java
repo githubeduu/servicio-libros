@@ -27,6 +27,18 @@ public class LibrosController {
         this.librosService = librosService;
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Libro> getLibro(@PathVariable Long id) {
+        Optional<Libro> libroExistente = librosService.getLibroById(id);
+        
+        if (libroExistente.isPresent()) {
+            return ResponseEntity.ok(libroExistente.get()); // Devuelve el libro si existe
+        } else {
+            return ResponseEntity.notFound().build(); // Devuelve 404 si no se encuentra
+        }
+    }
+
+
     @GetMapping
     public ResponseEntity<List<Libro>> getLibros() {
         List<Libro> libros = librosService.getAllLibros();
