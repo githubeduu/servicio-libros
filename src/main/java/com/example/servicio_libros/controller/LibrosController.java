@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.servicio_libros.DTO.GeneroRequestDto;
 import com.example.servicio_libros.model.Libro;
 import com.example.servicio_libros.service.LibrosService;
 
@@ -75,5 +76,12 @@ public class LibrosController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-    
+
+    @PostMapping("/genero")
+    public ResponseEntity<List<Libro>> getLibrosByGenero(@RequestBody GeneroRequestDto generoRequest) {
+        List<Libro> libros = librosService.getLibrosByGenero(generoRequest.getGenero());
+        return new ResponseEntity<>(libros, HttpStatus.OK);
+    }
+
+
 }

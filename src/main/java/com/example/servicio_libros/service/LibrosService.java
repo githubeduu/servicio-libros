@@ -11,4 +11,5 @@ public interface LibrosService {
     Libro crearLibro(Libro libro);
     Libro actualizarLibro(Libro libro);
     void eliminarLibro(Long id);
+    List<Libro> getLibrosByGenero(String genero);
 }
