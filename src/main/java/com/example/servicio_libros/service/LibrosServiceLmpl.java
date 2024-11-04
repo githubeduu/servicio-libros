@@ -12,7 +12,7 @@ import com.example.servicio_libros.repository.LibrosRepository;
 @Service
 public class LibrosServiceLmpl implements LibrosService {
     
-     @Autowired
+    @Autowired
     private LibrosRepository librosRepository;
 
     @Override
@@ -38,5 +38,10 @@ public class LibrosServiceLmpl implements LibrosService {
     @Override
     public void eliminarLibro(Long id) {
         librosRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Libro> getLibrosByGenero(String genero) {
+        return librosRepository.findByGenero(genero);
     }
 }
