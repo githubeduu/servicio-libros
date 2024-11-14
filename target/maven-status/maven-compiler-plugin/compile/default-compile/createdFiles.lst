@@ -1,0 +1,8 @@
+com\example\servicio_libros\service\LibrosServiceLmpl.class
+com\example\servicio_libros\config\CorsConfig.class
+com\example\servicio_libros\DTO\GeneroRequestDto.class
+com\example\servicio_libros\service\LibrosService.class
+com\example\servicio_libros\ServicioLibrosApplication.class
+com\example\servicio_libros\model\Libro.class
+com\example\servicio_libros\controller\LibrosController.class
+com\example\servicio_libros\repository\LibrosRepository.class
