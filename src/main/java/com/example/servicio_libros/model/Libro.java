@@ -25,6 +25,12 @@ public class Libro {
 
     @Column(name = "genero", nullable = false)
     private String genero;
+
+    @Column(name = "imagenurl", nullable = false)
+    private String imagenurl;
+
+    @Column(name = "precio", nullable = false)
+    private int precio;
    
 
     // Getters y setters
@@ -66,6 +72,22 @@ public class Libro {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public String getImagenurl() {
+        return imagenurl;
+    }
+
+    public void setImagenurl(String imagenurl) {
+        this.imagenurl = imagenurl;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
 }
