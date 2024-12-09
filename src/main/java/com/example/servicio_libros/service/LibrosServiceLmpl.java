@@ -44,4 +44,8 @@ public class LibrosServiceLmpl implements LibrosService {
     public List<Libro> getLibrosByGenero(String genero) {
         return librosRepository.findByGenero(genero);
     }
+
+    public List<Libro> searchLibros(String keyword) {
+        return librosRepository.searchByKeyword(keyword);
+    }
 }
