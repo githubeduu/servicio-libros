@@ -1,0 +1,6 @@
+projectKey=servicio-libros
+serverUrl=http://localhost:9000
+serverVersion=10.7.0.96327
+dashboardUrl=http://localhost:9000/dashboard?id=servicio-libros
+ceTaskId=4fbb47b1-d442-4b9a-8aeb-c0856d92f6c0
+ceTaskUrl=http://localhost:9000/api/ce/task?id=4fbb47b1-d442-4b9a-8aeb-c0856d92f6c0

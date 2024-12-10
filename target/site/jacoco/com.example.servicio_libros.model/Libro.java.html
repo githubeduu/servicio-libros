@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Libro.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">servicio-libros</a> &gt; <a href="index.source.html" class="el_package">com.example.servicio_libros.model</a> &gt; <span class="el_source">Libro.java</span></div><h1>Libro.java</h1><pre class="source lang-java linenums">package com.example.servicio_libros.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = &quot;libro&quot;)
+<span class="fc" id="L12">public class Libro {   </span>
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = &quot;titulo&quot;, nullable = false)
+    private String titulo;
+
+    @Column(name = &quot;autor&quot;, nullable = false)
+    private String autor;
+
+    @Column(name = &quot;anio_publicacion&quot;, nullable = false)
+    private int anioPublicacion;
+
+    @Column(name = &quot;genero&quot;, nullable = false)
+    private String genero;
+
+    @Column(name = &quot;imagenurl&quot;, nullable = false)
+    private String imagenurl;
+
+    @Column(name = &quot;precio&quot;, nullable = false)
+    private int precio;
+   
+
+    // Getters y setters
+    public Long getId() {
+<span class="fc" id="L38">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="fc" id="L42">        this.id = id;</span>
+<span class="fc" id="L43">    }</span>
+
+    public String getTitulo() {
+<span class="fc" id="L46">        return titulo;</span>
+    }
+
+    public void setTitulo(String titulo) {
+<span class="fc" id="L50">        this.titulo = titulo;</span>
+<span class="fc" id="L51">    }</span>
+
+    public String getAutor() {
+<span class="fc" id="L54">        return autor;</span>
+    }
+
+    public void setAutor(String autor) {
+<span class="fc" id="L58">        this.autor = autor;</span>
+<span class="fc" id="L59">    }  </span>
+
+    public int getAnioPublicacion() {
+<span class="fc" id="L62">        return anioPublicacion;</span>
+    }
+
+    public void setAnioPublicacion(int anioPublicacion) {
+<span class="fc" id="L66">        this.anioPublicacion = anioPublicacion;</span>
+<span class="fc" id="L67">    }</span>
+
+    public String getGenero() {
+<span class="fc" id="L70">        return genero;</span>
+    }
+
+    public void setGenero(String genero) {
+<span class="fc" id="L74">        this.genero = genero;</span>
+<span class="fc" id="L75">    }</span>
+
+    public String getImagenurl() {
+<span class="fc" id="L78">        return imagenurl;</span>
+    }
+
+    public void setImagenurl(String imagenurl) {
+<span class="fc" id="L82">        this.imagenurl = imagenurl;</span>
+<span class="fc" id="L83">    }</span>
+
+    public int getPrecio() {
+<span class="fc" id="L86">        return precio;</span>
+    }
+
+    public void setPrecio(int precio) {
+<span class="fc" id="L90">        this.precio = precio;</span>
+<span class="fc" id="L91">    }</span>
+
+}
+   
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
